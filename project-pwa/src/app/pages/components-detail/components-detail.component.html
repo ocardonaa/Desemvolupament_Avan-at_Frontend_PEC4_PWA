@@ -1,1 +1,18 @@
-<p>components-detail works!</p>
+<div class="container mt-5">
+    @if(productDetail()) {
+        <div class="row animate__animated animate__backInLeft">
+            <div class="col-md-9"></div>
+            <p><b>Identifier: </b>{{ productDetail().id }}</p>
+            <p><b>Title: </b>{{ productDetail().title }}</p>
+            <p><b>Price: </b>{{ productDetail().price }}</p>
+            <p><b>Description: </b>{{ productDetail().description }}</p>
+            <p><b>Category: </b>{{ productDetail().category }}</p>
+            <p><b>Rate: </b>{{ productDetail().rating.rate }}</p>
+            <p><b>Count: </b>{{ productDetail().rating.count }}</p>
+            <img src="{{ productDetail().image }}" alt="Product Image">
+        </div>
+        <div class="col-md-3">
+            <a routerLink="/" class="btn btn-danger">Back</a>
+        </div>
+    }
+</div>

@@ -1,18 +1,22 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { MemesResponse } from '../models/component.interface';
+import { Product } from '../models/component.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ComponentsService {
 
-  private api = 'https://api.imgflip.com/get_memes';
+  private api = 'https://fakestoreapi.com/products';
 
   constructor(private http: HttpClient) { }
 
-  getMemes(): Observable<MemesResponse> {
-    return this.http.get<MemesResponse>(this.api);
+  getProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.api);
+  }
+
+  getProductById(id: string): Observable<Product> {
+    return this.http.get<Product>(this.api + '/' + id);
   }
 }

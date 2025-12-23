@@ -1,15 +1,12 @@
-export interface Meme {
+export interface Product {
     id: string,
-    name: string,
-    url: string,
-    width: number,
-    height: number,
-    box_count: number
-}
-
-export interface MemesResponse {
-  success: boolean;
-  data: {
-    memes: Meme[];
-  };
+    title: string,
+    price: number,
+    description: string,
+    category: string,
+    image: string,
+    rating: {
+      rate: number,
+      count: number
+    }
 }
