@@ -7,3 +7,32 @@ mat-spinner {
     margin-top: 10em;
     margin-right: auto;
 }
+
+.view-switch-container {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin-bottom: 1em;
+}
+
+mat-card {
+    width: 100%;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+}
+
+h1 {
+    margin-top: 3em;
+}
+
+mat-icon {
+    margin-right: 0 !important;
+}
+
+button {
+    margin-left: 1em;
+}
