@@ -1,11 +1,19 @@
-<div class="container">
-    <h1 class="animate__animated animate__backInLeft">Products from FakeStoreAPI</h1>
-    <ul class="list=group">
-        @for (product of products(); track product.id) {
-        <a [routerLink]="['/components', product.id]"
-            class="list-group-item list-group-item-action animate__animated animate__bounce animate__fadeIn">
-            {{ product.id }} -- {{ product.title }}
-        </a>
-        }
-    </ul>
+<div>
+    @if(showSpinner) {
+    <mat-spinner diameter="150"></mat-spinner>
+    }
+
+    @if(!showSpinner) {
+    <div class="container">
+        <h1 class="animate__animated animate__backInLeft">Products from FakeStoreAPI</h1>
+        <ul class="list=group">
+            @for (product of products(); track product.id) {
+            <a [routerLink]="['/components', product.id]"
+                class="list-group-item list-group-item-action animate__animated animate__bounce animate__fadeIn">
+                {{ product.id }} -- {{ product.title }}
+            </a>
+            }
+        </ul>
+    </div>
+    }
 </div>

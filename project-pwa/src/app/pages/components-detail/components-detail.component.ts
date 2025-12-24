@@ -2,11 +2,12 @@ import { Component, signal } from '@angular/core';
 import { ComponentsService } from '../../services/components.service';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Product } from '../../models/component.interface';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-components-detail',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, MatProgressSpinnerModule],
   templateUrl: './components-detail.component.html',
   styleUrl: './components-detail.component.scss'
 })
