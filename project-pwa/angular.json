@@ -19,6 +19,7 @@
           "options": {
             "outputPath": "dist/project-pwa",
             "index": "src/index.html",
+            "baseHref": "Desemvolupament_Avan-at_Frontend_PEC4_PWA",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -39,6 +40,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "Desemvolupament_Avan-at_Frontend_PEC4_PWA",
               "budgets": [
                 {
                   "type": "initial",
@@ -100,6 +102,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
