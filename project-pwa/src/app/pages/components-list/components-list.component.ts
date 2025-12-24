@@ -6,7 +6,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-components-list',
@@ -40,12 +40,10 @@ export class ComponentsListComponent {
   changetoTable(): void {
     this.cardsView = false;
     this.tableView = true;
-    console.log(this.cardsView, this.tableView);
   }
 
   changetoCards(): void {
     this.cardsView = true;
     this.tableView = false;
-    console.log(this.cardsView, this.tableView);
   }
 }

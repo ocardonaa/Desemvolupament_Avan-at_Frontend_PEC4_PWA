@@ -3,11 +3,13 @@ import { ComponentsService } from '../../services/components.service';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Product } from '../../models/component.interface';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatButtonModule } from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-components-detail',
   standalone: true,
-  imports: [RouterLink, MatProgressSpinnerModule],
+  imports: [RouterLink, MatProgressSpinnerModule, MatButtonModule, MatExpansionModule],
   templateUrl: './components-detail.component.html',
   styleUrl: './components-detail.component.scss'
 })
@@ -24,7 +26,11 @@ export class ComponentsDetailComponent {
       rate: 0,
       count: 0
     }
-  })
+  });
+
+  dataSource = this.productDetail;
+
+  readonly panelOpenState = signal(false);
 
   constructor(private componentsService: ComponentsService, private activatedRoute: ActivatedRoute, private router: Router) {
 
@@ -39,6 +45,7 @@ export class ComponentsDetailComponent {
           this.router.navigateByUrl('/');
         }
         this.productDetail.set(prod);
+        this.dataSource = this.productDetail;
       })
     }
   }
