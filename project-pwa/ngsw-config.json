@@ -33,11 +33,11 @@
   "dataGroups": [
     {
       "name": "products-api",
-      "urls": ["https://fakestoreapi.com/products"],
+      "urls": ["https://fakestoreapi.com/products*"],
       "cacheConfig": {
         "maxSize": 100,
         "maxAge": "1h",
-        "timeout": "2s",
+        "timeout": "5s",
         "strategy": "freshness"
       }
     }

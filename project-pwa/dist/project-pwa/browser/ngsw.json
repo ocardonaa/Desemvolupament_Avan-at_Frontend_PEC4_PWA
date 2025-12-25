@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1766618961047,
+  "timestamp": 1766620760700,
   "index": "Desemvolupament_Avan-at_Frontend_PEC4_PWA/index.html",
   "assetGroups": [
     {
@@ -49,12 +49,12 @@
     {
       "name": "products-api",
       "patterns": [
-        "https:\\/\\/fakestoreapi\\.com\\/products"
+        "https:\\/\\/fakestoreapi\\.com\\/products[^/]*"
       ],
       "strategy": "freshness",
       "maxSize": 100,
       "maxAge": 3600000,
-      "timeoutMs": 2000,
+      "timeoutMs": 5000,
       "cacheQueryOptions": {
         "ignoreVary": true
       },
